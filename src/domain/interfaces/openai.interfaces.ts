@@ -155,7 +155,7 @@ export interface IOpenAIFunctionExecutor {
   /**
    * Execute a function call
    */
-  execute(toolCall: import('../entities').OpenAIToolCall): Promise<import('../entities').OpenAIToolCallResult>;
+  execute(toolCall: import('../entities').OpenAIToolCall): Promise<OpenAIToolCallResult>;
   
   /**
    * Get available functions
