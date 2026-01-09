@@ -1,0 +1,38 @@
+module.exports = {
+  root: true,
+  extends: ["eslint:recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  parserOptions: {
+    ecmaVersion: 2022,
+    sourceType: "module",
+  },
+  env: {
+    es2022: true,
+    browser: true,
+    node: true,
+  },
+  globals: {
+    __DEV__: "readonly",
+    NodeJS: "readonly",
+    Buffer: "readonly",
+    Blob: "readonly",
+    File: "readonly",
+    FileReader: "readonly",
+    Response: "readonly",
+    AbortController: "readonly",
+    AbortSignal: "readonly",
+    TextDecoder: "readonly",
+    fetch: "readonly",
+    console: "readonly",
+    setTimeout: "readonly",
+    clearTimeout: "readonly",
+    setInterval: "readonly",
+    clearInterval: "readonly",
+    require: "readonly",
+  },
+  rules: {
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
+  },
+};
